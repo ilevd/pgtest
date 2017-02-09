@@ -1,0 +1,50 @@
+name = "Sample Pie Chart"
+description = "Pie Descr"
+short_description = "Short Pie descr" 
+
+[meta]
+cat-tags = "anyMap"
+tags = ["map"]
+index = 1000
+is_new = false
+export = "chart"
+
+[deps]
+scripts = ["http://cdn.anychart.com/geodata/1.2.0/countries/australia/australia.js"]
+local_scripts = ["../anychart-bundle.min.js"]
+styles = ["https://cdn.anychart.com/css/latest/anychart-ui.min.css"]
+
+[code]
+type = "js"
+code = """
+anychart.onDocumentReady(function() {
+      chart = anychart.pie([
+        ["Chocolate", 5],
+        ["Rhubarb compote", 2],
+        ["Crêpe Suzette", 2],
+        ["American blueberry", 2],
+        ["Buttermilk", 1]
+      ]);
+      chart.title("Top 5 pancake fillings");
+      chart.container("container");
+      chart.draw();
+      });
+"""
+
+[style]
+type = "css"
+code = """
+"""
+
+[markup]
+type = "html"
+code = """
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 100%"></div>
+</body>
+</html>
+"""
