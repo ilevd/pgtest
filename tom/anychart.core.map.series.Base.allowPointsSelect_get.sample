@@ -3,11 +3,9 @@ description = "Descr"
 short-description = "Short descr" 
 
 [meta]
-cat-tags = "anyMap"
 tags = ["map"]
-index = 1000
-is-new = false
 export = "map"
+show_on_landing = true
 
 [deps]
 scripts = ["http://cdn.anychart.com/geodata/1.2.0/countries/australia/australia.js"]
