@@ -3,11 +3,9 @@ description = "Pie Descr"
 short_description = "Short Pie descr" 
 
 [meta]
-cat-tags = "anyMap"
 tags = ["map"]
-index = 1000
-is_new = false
 export = "chart"
+show_on_landing = true
 
 [deps]
 scripts = ["http://cdn.anychart.com/geodata/1.2.0/countries/australia/australia.js"]

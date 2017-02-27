@@ -1,6 +1,6 @@
 name = "Map Chart"
-description = "Descr"
-short-description = "Short descr" 
+description = "Cool description"
+short_description = "Cool short description" 
 
 [meta]
 tags = ["map"]
