@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="ac:name" content="Column Chart"/>
+    <meta name="ac:show-on-landing" content="false"/>
+    <meta name="ac:tags" content="column charts, bar charts, mixed charts, combo charts, multi-series charts, charts"/>
+    <meta name="ac:short-desc" content="Pie chart."/>
+    <meta name="ac:desc" content="pie chart"/>
+
+    <script src="https://cdn.anychart.com/js/{{branch-name}}/anychart-bundle.min.js"></script>
+    <script src="https://cdn.anychart.com/js/{{js-version}}/anychart-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.anychart.com/css/{{css-version}}/anychart-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.anychart.com/fonts/{{fonts-version}}/anychart.css">
+    <style>
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+  anychart.onDocumentLoad(function() {
+    // create an instance of a pie chart with data
+    var chart = anychart.pie([
+      ["Chocolate", 5],
+      ["Rhubarb compote", 2],
+      ["Crêpe Suzette", 2],
+      ["American blueberry", 2],
+      ["Buttermilk", 1]
+    ]);
+    chart.title("Top 5 pancake fillings");
+    // pass the container id, chart will be displayed there
+    chart.container("container");
+    // call the chart draw() method to initiate chart display
+    chart.draw();
+  });
+</script>
+</body>
+</html>
